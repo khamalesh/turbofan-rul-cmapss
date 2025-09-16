@@ -49,6 +49,13 @@ The objective of this project is to demonstrate the application of advanced mach
 - Subsets FD001–FD004 cover different operating conditions and fault modes.  
 
 ---
+## Visualizations
+
+**Actual vs Predicted RUL (FD001)**  
+![RUL Prediction](plots/actual_vs_predicted_FD001.png)
+
+**Residual Error Distribution (FD001)**  
+![Residuals](plots/residuals_FD001.png)
 
 ## How to Run
 
