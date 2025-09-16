@@ -1,0 +1,17 @@
+torch>=2.0.0
+torchvision
+torchaudio
+
+numpy>=1.22
+pandas>=1.5
+
+scikit-learn>=1.1
+matplotlib>=3.6
+seaborn>=0.12
+
+optuna>=3.0
+openpyxl>=3.0
+
+PyWavelets>=1.4.0
+tqdm>=4.64
+joblib>=1.2
