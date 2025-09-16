@@ -12,59 +12,14 @@ Libraries: NumPy, pandas, scikit-learn, Matplotlib, Seaborn, Optuna, PyWavelets
 Tools: JupyterLab, Visual Studio Code
 
 Repository Structure:
-The project is organized as follows:
-├── checkpoints # Saved model weights for each dataset
-│ ├── best_model_FD001.pth
-│ ├── best_model_FD002.pth
-│ ├── best_model_FD003.pth
-│ └── best_model_FD004.pth
-├── data # CMAPSS dataset files & reference docs
-│ ├── Damage Propagation Modeling.pdf
-│ ├── readme.txt
-│ ├── RUL_FD001.txt
-│ ├── RUL_FD002.txt
-│ ├── RUL_FD003.txt
-│ ├── RUL_FD004.txt
-│ ├── test_FD001.txt
-│ ├── test_FD002.txt
-│ ├── test_FD003.txt
-│ ├── test_FD004.txt
-│ ├── train_FD001.txt
-│ ├── train_FD002.txt
-│ ├── train_FD003.txt
-│ └── train_FD004.txt
-├── experiments # Training & tuning scripts
-│ ├── final_retrain_evaluate.py
-│ └── optuna_tuning_per_dataset.py
-├── loss_logs # Per-epoch training and validation loss records
-│ ├── FD001_losses.csv
-│ ├── FD002_losses.csv
-│ ├── FD003_losses.csv
-│ └── FD004_losses.csv
-├── plots # Model evaluation plots & summaries
-│ ├── actual_vs_predicted_FD001.png
-│ ├── actual_vs_predicted_FD002.png
-│ ├── actual_vs_predicted_FD003.png
-│ ├── actual_vs_predicted_FD004.png
-│ ├── final_model_summary.csv
-│ ├── residuals_FD001.png
-│ ├── residuals_FD002.png
-│ ├── residuals_FD003.png
-│ └── residuals_FD004.png
-├── README.txt # Project overview and basic instructions
-├── requirements.txt # Python dependencies
-├── results # Final prediction results & summaries
-│ └── rul_results_summary.xlsx
-├── snapshots # Preprocessed data snapshots
-│ └── df_snapshots
-└── src # Core source code modules
-├── data_loader.py # Data loading, denoising, labeling, feature extraction
-├── dataset.py # Sequence generation and dataset formatting
-├── evaluate.py # Model evaluation and visualization
-├── losses.py # Loss function definitions
-├── model.py # CNN–BiLSTM–Attention architecture
-├── preprocess_combined.py # Combined preprocessing steps
-└── train.py # Training loop, early stopping, checkpointing
+├── src/               # Core source code (data loader, model, training, evaluation)
+├── experiments/       # Training and hyperparameter tuning scripts
+├── data/              # NASA C-MAPSS dataset (to be downloaded separately)
+├── results/           # Final prediction results and metrics
+├── plots/             # Visualizations (actual vs predicted, residuals)
+├── checkpoints/       # Saved model weights
+├── docs/              # Research report and configuration manual
+└── README.md          # Project overview
 
 
 Key Features
