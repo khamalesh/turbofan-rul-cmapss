@@ -78,6 +78,7 @@ References
 - Wu et al. (2020) – BiLSTM for C-MAPSS
 - Yildirim & Rana (2024) – Hyperparameter tuning with Optuna
 
-Author
-- Khamalesh Ramesh
-- MSc Data Analytics, National College of Ireland
+## Author
+Khamalesh Ramesh
+MSc Data Analytics
+National College of Ireland
