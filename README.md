@@ -73,11 +73,11 @@ python experiments/optuna_tuning_per_dataset.py
 
 
 References
-NASA C-MAPSS Turbofan Engine Degradation Data
-Guo et al. (2023), Zhang et al. (2024) – Hybrid attention-based RUL models
-Wu et al. (2020) – BiLSTM for C-MAPSS
-Yildirim & Rana (2024) – Hyperparameter tuning with Optuna
+- NASA C-MAPSS Turbofan Engine Degradation Data
+- Guo et al. (2023), Zhang et al. (2024) – Hybrid attention-based RUL models
+- Wu et al. (2020) – BiLSTM for C-MAPSS
+- Yildirim & Rana (2024) – Hyperparameter tuning with Optuna
 
 Author
-Khamalesh Ramesh
-MSc Data Analytics, National College of Ireland
+- Khamalesh Ramesh
+- MSc Data Analytics, National College of Ireland
