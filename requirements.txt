@@ -1,0 +1,32 @@
+# ==============================
+# Turbofan RUL Prediction Project
+# Requirements File
+# ==============================
+# Python environment: 3.10+
+# Framework: PyTorch with Apple MPS backend
+# ==============================
+
+# Deep Learning Framework
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Data Processing and Analysis
+numpy>=1.22
+pandas>=1.5
+scikit-learn>=1.1
+joblib>=1.2
+openpyxl>=3.0   # Excel file support
+
+# Signal Processing
+PyWavelets>=1.4.0
+
+# Visualization
+matplotlib>=3.6
+seaborn>=0.12
+
+# Hyperparameter Optimization
+optuna>=3.0
+
+# Utilities
+tqdm>=4.64      # Progress bars
