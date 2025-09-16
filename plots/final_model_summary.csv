@@ -1,0 +1,5 @@
+Dataset,RMSE,MAE,R2,Epochs Trained,Loss Function,GRU,Attention
+FD001,0.7655,0.5354,0.9997,50,mse,No,dual
+FD002,1.7763,1.2934,0.9982,50,mse,No,dual
+FD003,1.3242,0.9195,0.9989,50,mse,No,dual
+FD004,3.0947,2.0984,0.9943,50,composite,No,dual
