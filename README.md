@@ -1,69 +1,79 @@
-Turbofan RUL Prediction (NASA C-MAPSS)
+# Turbofan RUL Prediction (NASA C-MAPSS)
 
-Overview
-This repository contains a deep learning framework for predicting the Remaining Useful Life (RUL) of turbofan engines using the NASA C-MAPSS dataset.
-A hybrid CNN–BiLSTM–Attention model is implemented to capture both local degradation patterns and long-term temporal dependencies.
-The objective of this project is to demonstrate the application of advanced machine learning techniques to predictive maintenance in aerospace systems.
+## Overview
+This repository presents a deep learning framework for predicting the **Remaining Useful Life (RUL)** of turbofan engines using the **NASA C-MAPSS dataset**.  
+A hybrid **CNN–BiLSTM–Attention model** has been implemented to capture both local degradation patterns and long-term temporal dependencies.  
 
-Technology Stack
-Language: Python 3.10
-Framework: PyTorch (Apple MPS backend)
-Libraries: NumPy, pandas, scikit-learn, Matplotlib, Seaborn, Optuna, PyWavelets
-Tools: JupyterLab, Visual Studio Code
+The objective of this project is to demonstrate the application of advanced machine learning methods to predictive maintenance in aerospace systems.
 
-Repository Structure:
-├── src/               # Core source code (data loader, model, training, evaluation)
-├── experiments/       # Training and hyperparameter tuning scripts
-├── data/              # NASA C-MAPSS dataset (to be downloaded separately)
-├── results/           # Final prediction results and metrics
-├── plots/             # Visualizations (actual vs predicted, residuals)
-├── checkpoints/       # Saved model weights
-├── docs/              # Research report and configuration manual
-└── README.md          # Project overview
+---
 
+## Features
 
-Key Features
-* Wavelet-based denoising for noisy sensor signals
-* Temporal feature engineering: rolling mean, rolling standard deviation, and delta differences
-* Hybrid architecture combining CNN layers, BiLSTM layers, and dual attention mechanisms
-* Composite loss function (MSE + Huber) for robust learning
-* Automated hyperparameter tuning with Optuna across dataset subsets
-* Reproducible outputs including plots, logs, and snapshots
+### 1. Data Preprocessing and Feature Engineering
+- Wavelet-based denoising to smooth noisy sensor signals.  
+- Extraction of rolling statistics (mean, standard deviation) and delta features.  
+- Implementation of piecewise-linear RUL labeling capped at 125 cycles.  
 
-How to Run
-Clone the repository:
+### 2. Hybrid Deep Learning Architecture
+- Convolutional layers capture local degradation patterns across multiple time scales.  
+- Bidirectional LSTM layers model long-term temporal dependencies.  
+- Dual attention mechanisms highlight critical sensors and time steps.  
+- Composite loss function (MSE + Huber) balances robustness and accuracy.  
+
+### 3. Training and Optimization
+- Hyperparameter tuning with Optuna across multiple dataset subsets.  
+- Early stopping and checkpointing strategies to mitigate overfitting.  
+- Modular training pipeline designed for reproducibility.  
+
+### 4. Evaluation and Visualization
+- Performance metrics include RMSE, MAE, and R².  
+- Visualizations of predicted versus actual RUL trajectories.  
+- Residual error distributions and attention weight plots.  
+
+---
+
+## Technologies Used
+- **Programming Language:** Python 3.10  
+- **Framework:** PyTorch (Apple MPS backend)  
+- **Data Processing:** NumPy, pandas, scikit-learn  
+- **Visualization:** Matplotlib, Seaborn  
+- **Optimization:** Optuna  
+- **Signal Processing:** PyWavelets  
+- **Development Tools:** JupyterLab, Visual Studio Code  
+
+---
+
+## Data Sources
+- **Dataset:** [NASA C-MAPSS Turbofan Engine Degradation Data](https://data.nasa.gov/dataset/C-MAPSS/)  
+- Subsets FD001–FD004 cover different operating conditions and fault modes.  
+
+---
+
+## How to Run
+
+1. Clone the Repository
 git clone https://github.com/<YOUR_USERNAME>/turbofan-rul-cmapss.git
 cd turbofan-rul-cmapss
 
 
-Install dependencies:
+2. Install Dependencies
 pip install -r requirements.txt
 
 
-Download the dataset:
-Source: NASA Prognostics Data Repository
-Place the files inside the data/ directory (e.g., train_FD001.txt, test_FD001.txt, etc.).
+3. Download the Dataset
+Download the dataset from the NASA Prognostics Repository and place the files in the data/ directory.
 
-Train and evaluate the model:
+4. Train and Evaluate
 python experiments/final_retrain_evaluate.py
 
 
-Run hyperparameter tuning:
+5. Run Hyperparameter Tuning
 python experiments/optuna_tuning_per_dataset.py
 
 
-Results
-Performance across C-MAPSS subsets using tuned configurations:
-
-Dataset	RMSE	MAE	R²	Loss Function	Attention
-FD001	0.7655	0.5354	0.9997	MSE	   Dual
-FD002	1.7763	1.2934	0.9982	MSE	   Dual
-FD003	1.3242	0.9195	0.9989	MSE	   Dual
-FD004	3.0947	2.0984	0.9943	Composite	Dual
-
-
 References
-NASA C-MAPSS Turbofan Engine Degradation Data – Link (https://data.nasa.gov/dataset/C-MAPSS/)
+NASA C-MAPSS Turbofan Engine Degradation Data
 Guo et al. (2023), Zhang et al. (2024) – Hybrid attention-based RUL models
 Wu et al. (2020) – BiLSTM for C-MAPSS
 Yildirim & Rana (2024) – Hyperparameter tuning with Optuna
