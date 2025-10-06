@@ -1,5 +1,8 @@
 # Turbofan RUL Prediction (NASA C-MAPSS)
 
+![image alt](https://github.com/khamalesh/turbofan-rul-cmapss/blob/55187cd4ea52d4df04349f8e1c0abaff8d4b88b4/Rul-Images.jpg)
+
+
 ## Overview
 This repository presents a deep learning framework for predicting the **Remaining Useful Life (RUL)** of turbofan engines using the **NASA C-MAPSS dataset**.  
 A hybrid **CNN–BiLSTM–Attention model** has been implemented to capture both local degradation patterns and long-term temporal dependencies.  
