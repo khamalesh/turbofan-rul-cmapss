@@ -86,4 +86,4 @@ References
 - Yildirim & Rana (2024) – Hyperparameter tuning with Optuna
 
 
-![image alt](https://github.com/khamalesh/turbofan-rul-cmapss/blob/31d2ad013f01e6fe251db5aef7e3478f2d77bbfc/RUL_IMAGE)
+
